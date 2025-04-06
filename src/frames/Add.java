@@ -188,10 +188,6 @@ public class Add extends javax.swing.JFrame {
     private void jBtnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSubmitActionPerformed
         if (!jTxtTitle.getText().equals("") && !jTxtISBN.getText().equals("") && !jTxtAuthors.getText().equals("")
                 && !jTxtPrice.getText().equals("") && !jTxtQuantity.getText().equals("")) {
-            if (Double.parseDouble(jTxtPrice.getText()) <= 0 || Integer.parseInt(jTxtQuantity.getText()) < 0) {
-                JOptionPane.showMessageDialog(this, "Price and quantity can't be negative and price can't be 0.", "WARNING", JOptionPane.WARNING_MESSAGE);
-                return;
-            }
             Iterator it = inventory.keySet().iterator();
             //Variables
             String key;
@@ -203,6 +199,10 @@ public class Add extends javax.swing.JFrame {
                 price = Double.parseDouble(jTxtPrice.getText());
             } catch (NumberFormatException e) {
                 JOptionPane.showMessageDialog(this, "Incorrect format of the price. Ex:(4.99)", "WARNING", JOptionPane.WARNING_MESSAGE);
+                return;
+            }
+            if (Double.parseDouble(jTxtPrice.getText()) <= 0 || Integer.parseInt(jTxtQuantity.getText()) < 0) {
+                JOptionPane.showMessageDialog(this, "Price and quantity can't be negative and price can't be 0.", "WARNING", JOptionPane.WARNING_MESSAGE);
                 return;
             }
             Book addBook = new Book(jTxtTitle.getText(), jTxtISBN.getText(), authorList, price, Integer.parseInt(jTxtQuantity.getText()));
