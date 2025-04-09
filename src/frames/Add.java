@@ -231,6 +231,7 @@ public class Add extends javax.swing.JFrame {
                     JOptionPane.showMessageDialog(this, "Error while adding the book.", "WARNING", JOptionPane.WARNING_MESSAGE);
                     menu.setVisible(true);
                     this.setVisible(false);
+                    return;
                 }
                 JOptionPane.showMessageDialog(this, "The book has been added.", "INFORMATION", JOptionPane.INFORMATION_MESSAGE);
                 menu.setVisible(true);

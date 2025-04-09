@@ -58,14 +58,14 @@ public class Book {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-   
+
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.title);
+        hash = 79 * hash + Objects.hashCode(this.ISBN);
         return hash;
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -78,7 +78,7 @@ public class Book {
             return false;
         }
         final Book other = (Book) obj;
-        return Objects.equals(this.title, other.title);
+        return Objects.equals(this.ISBN, other.ISBN);
     }
 
     @Override
