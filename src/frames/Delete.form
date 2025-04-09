@@ -29,9 +29,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="jLblTitle" min="-2" pref="71" max="-2" attributes="0"/>
+                  <Component id="jLblISBN" min="-2" pref="71" max="-2" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
-                      <Component id="jTxtTitle" min="-2" pref="300" max="-2" attributes="0"/>
+                      <Component id="jTxtISBN" min="-2" pref="300" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="jBtnSubmit" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -60,10 +60,10 @@
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLblTitle" min="-2" max="-2" attributes="0"/>
+              <Component id="jLblISBN" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jTxtTitle" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTxtISBN" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBtnSubmit" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -100,14 +100,14 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jBtnReturnActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTxtTitle">
+    <Component class="javax.swing.JTextField" name="jTxtISBN">
     </Component>
-    <Component class="javax.swing.JLabel" name="jLblTitle">
+    <Component class="javax.swing.JLabel" name="jLblISBN">
       <Properties>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Title"/>
+        <Property name="text" type="java.lang.String" value="ISBN"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jBtnSubmit">

@@ -51,8 +51,8 @@ public class Delete extends javax.swing.JFrame {
 
         jLblDelete = new javax.swing.JLabel();
         jBtnReturn = new javax.swing.JButton();
-        jTxtTitle = new javax.swing.JTextField();
-        jLblTitle = new javax.swing.JLabel();
+        jTxtISBN = new javax.swing.JTextField();
+        jLblISBN = new javax.swing.JLabel();
         jBtnSubmit = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTxtareaDeleteList = new javax.swing.JTextArea();
@@ -74,8 +74,8 @@ public class Delete extends javax.swing.JFrame {
             }
         });
 
-        jLblTitle.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLblTitle.setText("Title");
+        jLblISBN.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLblISBN.setText("ISBN");
 
         jBtnSubmit.setBackground(new java.awt.Color(0, 153, 255));
         jBtnSubmit.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -99,9 +99,9 @@ public class Delete extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLblISBN, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jTxtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTxtISBN, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jBtnSubmit))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -122,10 +122,10 @@ public class Delete extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jLblDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLblTitle)
+                .addComponent(jLblISBN)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTxtTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTxtISBN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jBtnSubmit))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -142,18 +142,18 @@ public class Delete extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnReturnActionPerformed
 
     private void jBtnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSubmitActionPerformed
-        if (!jTxtTitle.getText().equals("")){
+        if (!jTxtISBN.getText().equals("")){
             Iterator it = inventory.keySet().iterator();
             //Variables
             String key = "";
             boolean found = false;
-            Book addBook = new Book(jTxtTitle.getText());
+            Book deleteBook = new Book(jTxtISBN.getText());
             Book inventoryBook;
             // Verify if the book exists
             while (it.hasNext()) {
                 key = (String) it.next();
                 inventoryBook = inventory.get(key);
-                if (inventoryBook.hashCode() == addBook.hashCode()) {
+                if (inventoryBook.hashCode() == deleteBook.hashCode()) {
                     found = true;
                     break;
                 }
@@ -220,9 +220,9 @@ public class Delete extends javax.swing.JFrame {
     private javax.swing.JButton jBtnReturn;
     private javax.swing.JButton jBtnSubmit;
     private javax.swing.JLabel jLblDelete;
-    private javax.swing.JLabel jLblTitle;
+    private javax.swing.JLabel jLblISBN;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTxtTitle;
+    private javax.swing.JTextField jTxtISBN;
     private javax.swing.JTextArea jTxtareaDeleteList;
     // End of variables declaration//GEN-END:variables
 }
